@@ -1,0 +1,514 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background: #fff;
+    min-height: auto;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.header {
+    z-index: 10000;
+    position: fixed;
+    width: 100%;
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #272343;
+    padding: 24px;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.logo{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    justify-content: space-between;
+}
+
+.logo-inside {
+    display: flex;
+    margin: 6px;
+}
+
+.nav-elem {
+    font-family: "Poppins", sans-serif;
+    margin: 0px;
+    font-size: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;  
+    padding: 0 16px; 
+}
+
+.nav-elem:after{
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    height: 3px;
+    left: 0;
+    bottom: -12px;
+    width: 0%;
+    transition: 0.333s;
+}
+
+.nav-elem:hover:after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    height: 3px;
+    left: 0;
+    bottom: -12px;
+    width: 100%;
+}
+#current:after{
+    content: "";
+    position: absolute;
+    background-color: #e8640c;
+    height: 3px;
+    left: 0;
+    bottom: -12px;
+    width: 0%;
+    transition: 0.333s;
+}
+
+#current:hover:after {
+    content: "";
+    position: absolute;
+    background-color: #e8640c;
+    height: 3px;
+    left: 0;
+    bottom: -12px;
+    width: 100%;
+}
+
+#current {
+    color: #e8640c;
+    
+    text-shadow: 0 0 3px;
+}
+
+.first {
+    padding-top: 46px;
+    margin-bottom: -7px;
+}
+
+.video {
+    width: 100%;
+    height: auto;
+}
+
+.image {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    background-image: linear-gradient(0deg, transparent, #e8640c),url(../source/guardianstore.jpg);
+    background-position: center;
+    background-size: cover;
+    font-size: 34px;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+
+}
+
+#text-logo {
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 500;
+    margin-left: 6px;
+    font-size: 22px;
+    color: #FFFFFF;
+}
+
+
+.hamburger {
+    padding: 0 16px; 
+    margin: 0px;
+    display: none;
+    cursor: pointer;
+}
+
+.button_shop {
+    font-size: 30px;
+    border-radius: 15px;
+    padding: 10px;
+    background-color:#272343;
+    cursor: pointer;
+}
+
+.button_shop:hover {
+    background-color:#dddddd;
+    color: #272343;
+    transition: 0.3s ease;
+
+}
+
+.category-item{
+    font-size: 30px;
+    min-height: 50vh;
+    padding: 20px;
+    border: #000;
+    width: 100%;
+    display: absolute;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cat-list{
+    padding: 20px;
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 20px;
+    gap: 8px;
+}
+
+.cat-button{
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    background: #e8640c;
+    border-radius: 20px;
+    width: 2px;
+    box-shadow: 1px 3px 7px 0 rgba(0, 0, 0, 0.4);
+}
+.cat-button:hover {
+    color: #e8640c;
+    background: #dddddd;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.decorlink a:visited {
+    color: white;
+}
+
+.decorlink {
+    text-decoration: underline;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background: #e8640c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.footer{
+    padding: 50px;
+    min-height: 160px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 12px;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.foot-elem{
+    width: 2em;
+    height: auto;
+}
+
+.foot-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.cardlist {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.card {
+    width: 280px;
+    height: 350px;
+    border-radius: 20px;
+    margin: 20px;
+    background-color: #272343;
+    overflow: hidden;
+    box-shadow: 1px 3px 7px 0 rgba(0, 0, 0, 0.4);
+}
+
+.card-image {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+.card-image img {
+    width:  60%;
+    height: auto;
+}
+.container h2{
+    font-size: 50px;
+}
+.card-detail {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+.striked {
+    text-decoration: line-through;
+}
+.card h6 {
+    font-weight: 200;
+}
+
+.buy-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+}
+.circle {
+    margin-top: 5em;
+    height: 50px;
+    width: 50px;
+    background-color: #12c453;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease;
+}
+.circle img {
+    height: 25px;
+    width: 30px;
+    margin-right: 4px;
+    margin-top: 4px;
+}
+.circle:hover {
+    background-color: #4bd781;
+}
+
+.container a{
+    background-color: #e8640c;
+    color: white;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+.searchdiv{
+    height: 20vh;
+    padding-top: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.searchbox{
+    margin-top: 20px;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.searchbox form input{
+    height: 30px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #272343;
+    width: 95vh;
+    box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.2);
+}
+.searchbox :placeholder-shown{
+    padding-left: 7px;
+}
+
+.searchbox button {
+    background-color: #e8640c;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.price {
+    margin-top: 70px;
+}
+
+.about {
+    padding-top: 46px;
+    width: 100%;
+    min-height: 100vh;
+
+}
+
+.about-elem{
+    padding: 50px;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: #272343;
+    gap: 20px;
+}
+
+.about-image {
+    width: 350px;
+    border-radius: 10px;
+}
+
+.about-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.contact-section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-size: 100%;
+    background-image: url(../source/contact-center.jpg);
+}
+
+.contact-box {
+    border-radius: 25px;
+    margin: 10px;
+    margin-top: 60px;
+    padding: 10px;
+    background-color: #272343;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.contact-elem {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-elem input {
+    width: 250px;
+}
+
+
+label {
+    color: white;
+    font-size: small;
+}
+.labe input {
+    width: 5vh;
+}
+
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0%;
+        width: 270px;
+        height: 250px;
+        background: #272343;
+    }
+
+    .nav-elem {
+        display: block;
+        margin: 12px 0;
+        padding: 0 20px;
+    }
+
+    .navbar.reveal {
+        flex-direction: column;
+        justify-content: flex-start;
+        display: flex;
+    }
+
+    .searchbox form input {
+        width: 50vh;
+    }
+
+    .about-elem {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 400px) {
+    .image{
+        font-size: 28px;
+    }
+    .button_shop {
+        font-size: 20px;
+    }
+}
